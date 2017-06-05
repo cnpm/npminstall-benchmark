@@ -20,13 +20,13 @@ yarn | 0.24.5
 
 ### cnpmjs.org install
 
-cli | real | user | sys
+installer | real | user | sys
 --- | ---  | ---  | ---
 
 
 ### ghost install
 
-cli | real | user | sys
+installer | real | user | sys
 --- | ---  | ---  | ---
 
 
@@ -36,7 +36,7 @@ see https://github.com/rstacruz/pnpm#benchmark
 
 install `babel-preset-es2015 browserify chalk debug minimist mkdirp`
 
-cli | real | user | sys
+installer | real | user | sys
 --- | ---  | ---  | ---
 
 ## License
