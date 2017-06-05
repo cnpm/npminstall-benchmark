@@ -1,0 +1,14 @@
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+node_modules
+npm-debug.log
+
+shrinkwrap.yaml
+yarn.lock
+package-lock.json

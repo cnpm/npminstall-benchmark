@@ -1,0 +1,11 @@
+{
+  "name": "pnpm-benchmark",
+  "dependencies": {
+    "babel-preset-es2015": "*",
+    "browserify": "*",
+    "chalk": "*",
+    "debug": "*",
+    "minimist": "*",
+    "mkdirp": "*"
+  }
+}
