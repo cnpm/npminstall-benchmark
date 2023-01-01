@@ -10,5 +10,7 @@ node_modules
 npm-debug.log
 
 shrinkwrap.yaml
+pnpm-lock.yaml
 yarn.lock
 package-lock.json
+.DS_Store

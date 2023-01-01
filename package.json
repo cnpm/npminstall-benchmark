@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run benchmark",
     "benchmark": "make",
-    "benchmark-china": "npm_registry=http://registry.npm.taobao.org make"
+    "benchmark-china": "npm_registry=http://registry.npmmirror.com make"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/cnpm/npminstall-benchmark#readme",
   "devDependencies": {
-    "npm": "5.0.2",
-    "npminstall": "3.0.0",
-    "pnpm": "0.68.0",
-    "yarn": "0.24.5"
+    "npm": "^9.2.0",
+    "npminstall": "^7.0.0",
+    "pnpm": "^7.21.0",
+    "yarn": "^1.22.19"
   }
 }

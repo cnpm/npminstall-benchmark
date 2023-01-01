@@ -3,14 +3,14 @@ all: pnpm-benchmark cnpmjs.org ghost
 
 pnpm-benchmark:
 	# see https://github.com/rstacruz/pnpm#benchmark
-	@echo "install babel-preset-es2015 browserify chalk debug minimist mkdirp"
+	@echo "📦📦📦📦 install babel-preset-es2015 browserify chalk debug minimist mkdirp"
 	@echo ------- npminstall@`npminstall -v` -------
 	@cd pnpm-benchmark && rm -rf node_modules
 	@cd pnpm-benchmark && time npminstall
 	@echo ------- pnpm@`pnpm -v` -------
-	@cd pnpm-benchmark && rm -rf node_modules shrinkwrap.yaml
+	@cd pnpm-benchmark && rm -rf node_modules pnpm-lock.yaml
 	@cd pnpm-benchmark && time pnpm i
-	@echo ------- pnpm@`pnpm -v` with shrinkwrap.yaml -------
+	@echo ------- pnpm@`pnpm -v` with pnpm-lock.yaml -------
 	@cd pnpm-benchmark && rm -rf node_modules
 	@cd pnpm-benchmark && time pnpm i
 	@echo ------- npm@`npm -v` -------
@@ -27,7 +27,7 @@ pnpm-benchmark:
 	@cd pnpm-benchmark && time yarn
 
 cnpmjs.org:
-	@echo "install cnpmjs.org dependencies"
+	@echo "📦📦📦📦 install cnpmjs.org dependencies"
 	@echo ------- npminstall@`npminstall -v` -------
 	@cd cnpmjs.org && rm -rf node_modules ~/.npminstall_tarball
 	@cd cnpmjs.org && time npminstall
@@ -38,9 +38,9 @@ cnpmjs.org:
 	@cd cnpmjs.org && rm -rf node_modules
 	@cd cnpmjs.org && time npminstall --no-cache
 	@echo --------- pnpm@`pnpm -v` -----------
-	@cd cnpmjs.org && rm -rf node_modules shrinkwrap.yaml
+	@cd cnpmjs.org && rm -rf node_modules pnpm-lock.yaml
 	@cd cnpmjs.org && time pnpm install
-	@echo --------- pnpm@`pnpm -v` with shrinkwrap.yaml -----------
+	@echo --------- pnpm@`pnpm -v` with pnpm-lock.yaml -----------
 	@cd cnpmjs.org && rm -rf node_modules
 	@cd cnpmjs.org && time pnpm install
 	@echo ---------- npm@`npm -v` -----------
@@ -57,7 +57,7 @@ cnpmjs.org:
 	@cd cnpmjs.org && time yarn
 
 ghost:
-	@echo "install ghost dependencies"
+	@echo "📦📦📦📦 install ghost dependencies"
 	@echo ------- npminstall@`npminstall -v` -------
 	@cd ghost && rm -rf node_modules ~/.npminstall_tarball
 	@cd ghost && time npminstall
@@ -66,19 +66,19 @@ ghost:
 	@cd ghost && time npminstall
 	@echo ------- npminstall@`npminstall -v` --no-cache -------
 	@cd ghost && rm -rf node_modules
-	@cd ghost && time ../../bin/install.js --no-cache
+	@cd ghost && time npminstall --no-cache
 	@echo ---------- npm@`npm -v` -----------
-	@cd ghost && rm -rf node_modules
+	@cd ghost && rm -rf node_modules package-lock.json
 	@npm cache clean
 	@cd ghost && time npm install
 	@echo ---- npm@`npm -v` with cache ------
 	@cd ghost && rm -rf node_modules
 	@cd ghost && time npm install
 	@echo --------- pnpm@`pnpm -v` -----------
-	@cd ghost && rm -rf node_modules shrinkwrap.yaml
+	@cd ghost && rm -rf node_modules pnpm-lock.yaml
 	@cd ghost && time pnpm install
 	@echo --------- yarn@`yarn -v` -----------
-	@cd ghost && rm -rf node_modules
+	@cd ghost && rm -rf node_modules yarn.lock
 	@cd ghost && time yarn
 
 .PHONY: pnpm-benchmark cnpmjs.org ghost
